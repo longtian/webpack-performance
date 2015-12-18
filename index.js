@@ -67,16 +67,14 @@ WebpackPerformancePlugin.prototype.apply = function (compiler) {
       var size = 0;
       if (assets[assetName]._value) {
         size = assets[assetName]._value.length;
-      } else {
-        size = assets[assetName]._cachedSource.length;
+        client.writePoint('asset', {
+          size: size
+        }, {
+          task: task_id,
+          user: username,
+          name: assetName
+        }, {}, done);
       }
-      client.writePoint('asset', {
-        size: size
-      }, {
-        task: task_id,
-        user: username,
-        name: assetName
-      }, {}, done);
     }
   });
 };
