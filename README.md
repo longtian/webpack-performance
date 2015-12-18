@@ -10,6 +10,8 @@ A webpack plugin to record important metrics during the building progress.
 
 ## Example
 
+You can download the dashboard configuration file [here](./doc/DashboardDefinition.json).
+
 Track assets whole package size
 
 ![](./doc/assets.png)
