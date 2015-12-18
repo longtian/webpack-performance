@@ -26,3 +26,7 @@ Track profiling infomation
 
 ![](./doc/profile.png)
 
+## License
+
+MIT
+
