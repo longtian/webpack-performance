@@ -1,5 +1,5 @@
 # webpack-performance
-A webpack plugin to record performance infomation.
+A webpack plugin to record important metrics during the building progress.
 
 **alpha version**
 
@@ -10,7 +10,7 @@ A webpack plugin to record performance infomation.
 
 ## Example
 
-Track assets package size
+Track assets whole package size
 
 ![](./doc/assets.png)
 
