@@ -42,11 +42,15 @@ WebpackPerformancePlugin.prototype.apply = function (compiler) {
     stat.compilation.modules.forEach(function (module, i) {
       var values = {
         reasons: module.reasons.length,
-        dependencies: module.dependencies.length,
-        "profile.factory": module.profile.factory || 0,
-        "profile.building": module.profile.building || 0,
-        "profile.dependencies": module.profile.dependencies || 0
+        dependencies: module.dependencies.length
       };
+
+      if (module.profile) {
+        values["profile.factory"] = module.profile.factory || 0;
+        values["profile.building"] = module.profile.building || 0;
+        values["profile.dependencies"] = module.profile.dependencies || 0;
+      }
+
 
       client.writePoint('modules', values, {
         task: task_id,
