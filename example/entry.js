@@ -10,6 +10,7 @@ require('style!css!./assets/style.css');
 
 require.ensure([], function (require) {
     var moment = require('moment');
+    var _ = require('lodash');
     var time = moment().format(format);
     $(function () {
         $('q').load(quote);
